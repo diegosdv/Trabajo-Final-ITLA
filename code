@@ -1,0 +1,60 @@
+# Sistema de calificaciones
+
+calificaciones = [100, 97, 99, 70, 60]
+
+# Mostrar todas las calificaciones
+print("Calificaciones:")
+for nota in calificaciones:
+    print(nota)
+
+# Mostrar una calificacion por su posicion
+print("\nPrimera calificacion:", calificaciones[0])
+print("Tercera calificacion:", calificaciones[2])
+
+# Calcular promedio
+suma = 0
+
+for nota in calificaciones:
+    suma = suma + nota
+
+promedio = suma / len(calificaciones)
+
+print("\nPromedio:", promedio)
+
+# Buscar nota mayor y menor
+mayor = calificaciones[0]
+menor = calificaciones[0]
+
+for nota in calificaciones:
+
+    if nota > mayor:
+        mayor = nota
+
+    if nota < menor:
+        menor = nota
+
+print("Calificacion mas alta:", mayor)
+print("Calificacion mas baja:", menor)
+
+# Contar aprobados y reprobados
+aprobados = 0
+reprobados = 0
+
+for nota in calificaciones:
+
+    if nota >= 70:
+        aprobados = aprobados + 1
+    else:
+        reprobados = reprobados + 1
+
+print("\nAprobados:", aprobados)
+print("Reprobados:", reprobados)
+
+# Modificar una calificacion
+print("\nCalificaciones antes del cambio:")
+print(calificaciones)
+
+calificaciones[1] = 80
+
+print("Calificaciones despues del cambio:")
+print(calificaciones)
